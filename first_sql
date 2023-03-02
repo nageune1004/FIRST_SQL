@@ -116,3 +116,35 @@ FROM EMPLOYEES
 GROUP BY DEP_ID
 HAVING COUNT(EMP_ID) < 4 
 ORDER BY AVG_SALARY;
+
+select * from petrescue;
+
+select sum(COST) from petrescue;
+
+select sum(COST) as SUM_OF_COST from petrescue;
+
+select max(QUANTITY) from petrescue;
+
+select avg(COST) from petrescue;
+
+select avg(COST/QUANTITY) from petrescue where ANIMAL = 'Dog';
+
+select round(COST) from petrescue;
+
+select length(ANIMAL) from petrescue;
+
+select UCASE(ANIMAL) from petrescue;
+
+select distinct(ucase(ANIMAL)) from petrescue;
+
+select * from petrescue where lcase(ANIMAL) = 'cat';
+
+select day(RESCUEDATE) from petrescue where ANIMAL = 'Cat';
+
+select sum(QUANTITY) from petrescue where MONTH(RESCUEDATE) = '05';
+
+select sum(QUANTITY) from petrescue where DAY(RESCUEDATE) = '14';
+
+select (RESCUEDATE + 3 DAYS) from petrescue;
+
+select (CURRENT DATE - RESCUEDATE) from petrescue;
